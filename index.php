@@ -174,60 +174,60 @@ $accion = "Agregar";
                     <div class="modal-body">
 						
                         <div class="container-fluid">
-						<div class="row form-group">
+						<div class="row form-group ">
                                 <div class="col-sm-12 text-center">
 									<h3><?php echo $accion?> Empleado</h4>
 								</div>
 							</div>
                             <div class="row form-group">
-                                <div class="col-sm-2">
-								<label class="control-label" style="position:relative; top:7px;" id="lblcedula" for="cedula">Cédula: </label>	
+                                <div class="col-sm-4 text-center">
+								<label class="control-label" style="position:relative; top:7px;" id="lblcedula" for="cedula">Cédula </label>	
                                 </div>
-                                <div class="col-sm-10">
-								<input class="form-control" type="text" name="cedula" value="<?php echo $cedula ?>" maxlength="10" size="11" required />
+                                <div class="col-sm-3">
+								<input class="form-control" type="text" name="cedula" value="<?php echo $cedula ?>" maxlength="10" size="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required />
                                 </div>
 							</div>
 							<div class="row form-group">
-                                <div class="col-sm-2">
+                                <div class="col-sm-4 text-center">
 								<label class="control-label" style="position:relative; top:7px;" id="lblNombres" for="nombres">Nombres</label>	
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-5">
 								<input class="form-control" type="text" type="text" name="nombres" value="<?php echo $nombres ?>" maxlength="100"
                                             size="25" required />
                                 </div>
 							</div>
 							<div class="row form-group">
-                                <div class="col-sm-2">
+                                <div class="col-sm-4 text-center">
 								<label class="control-label" style="position:relative; top:7px;" id="lblApellidos" for="apellidos">Apellidos </label>	
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-5">
 								<input class="form-control" type="text" type="text" name="apellidos" value="<?php echo $apellidos ?>"
                                             maxlength="100" size="11" >
                                 </div>
 							</div>
 							<div class="row form-group">
-                                <div class="col-sm-2">
+                                <div class="col-sm-4 text-center">
 								<label class="control-label" style="position:relative; top:7px;" label id="lblSalario" for="salario">Salario </label>	
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-3">
 								<input class="form-control" input type="number" name="salario" value="<?php echo $salario ?>" min="0" max ="9999"step="any" />
                                 </div>
 							</div>
 							<div class="row form-group">
-                                <div class="col-sm-2">
+                                <div class="col-sm-4 text-center">
 								<label class="control-label" style="position:relative; top:7px;" id="lblTelefono" for="telefono">Teléfono </label>	
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-5">
 								<input class="form-control" type="text" name="telefono" value="<?php echo $telefono ?>"
-                                            maxlength="10" size="11" />
+                                            maxlength="10" size="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
                                 </div>
 							</div>
 							<div class="row form-group">
-                                <div class="col-sm-2">
+                                <div class="col-sm-4 text-center">
 								<label class="control-label" style="position:relative; top:7px;" id="lblFechaNAcimiento" for="fechaNacimiento">Fecha Nacimiento  </label>	
                                 </div>
-                                <div class="col-sm-10">
-								<input class="form-control" type="text" name="fechaNacimiento" value="<?php echo $fechaNacimiento ?>"
+                                <div class="col-sm-3">
+								<input class="form-control" type="date" name="fechaNacimiento" min="1900-01-01" max="<?php echo date("Y-m-d");?>" value="<?php echo $fechaNacimiento ?>"
                                             maxlength="100" size="11"  />
                                 </div>
                             </div>
